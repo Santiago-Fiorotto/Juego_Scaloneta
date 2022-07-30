@@ -1,0 +1,293 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+  }
+
+body {
+    background: url(../imagenes/fotoScaloneta.jpeg);
+    background-size: 120%;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------FORMULARIO INGRESO -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+#formularioIngreso {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 22%;
+}
+
+
+.btn {
+    background-color: black;
+    color: white;
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    border: black;
+}
+
+.ingreseSuNombre  {
+    background-color: rgb(243, 241, 237);
+    color: black;
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    opacity: 90%;
+    
+}
+
+.ingreseSuNombre:hover {
+    background-color: rgb(169, 163, 163);
+}
+
+.ingreseSuApellido {
+    background-color: rgb(243, 241, 237);
+    color: black;
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    opacity: 90%;
+}
+
+.ingreseSuApellido:hover {
+    background-color: rgb(169, 163, 163);
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------SALUDO E INSTRUCCIONES DEL JUEGO ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+#contenidoDespuesDeIngreso {
+    display: flex;
+    flex-direction: column;
+    font-size: 40px;
+    background: white;
+    border-radius: 10px;
+    opacity: 80%;
+    color: black;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+#botonParaContinuar {
+    display: none;
+    min-width: 67%;
+    max-width: 67%;   
+}
+
+#mostrarListaDeAsientos {
+    display: none;
+    margin-top: 10%;
+    margin-left: 15%;
+    justify-content: center;
+    align-items: end;
+}
+
+#volverBoton {
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+    min-width: 70%;
+    max-width: 70%; 
+}
+.fetchDiv {
+    font-size: 50px;
+    background: white;
+    border-radius: 10px;
+    opacity: 80%;
+    min-width: 70%;
+    max-width: 70%;
+}
+
+#contenidoDespuesDeSaludo {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+/*RELOJ CSS*/
+#tiempoJuego {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+}
+
+/*---------------------------------------------------PREGUNTAS DEL JUEGO --------------------------------------------------------------------*/
+#preguntasDelJuego {
+    display: none;
+}
+
+#tableroDeJuego {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+#encabezado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 80%;
+    max-width: 80%;
+    background-color: white;
+    color: black;
+    opacity: 80%;
+    margin: 15px;
+    padding: 10px;
+    border-radius: 15px;
+    min-height: 250px;
+    font-size: 250%;
+}
+
+.opcionesDelJuego {
+    min-width: 80%;
+    max-width: 80%;
+    background-color: white;
+    color: black;
+    opacity: 80%;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 150%;
+}
+
+.opcionesDelJuego:hover {
+    background-color: rgb(169, 163, 163);
+}
+
+#despuesDelJuego{
+    display: none;
+}
+#pausar {
+    display: block;
+    display: flex;
+    justify-content: center;
+    margin-top: 25%;
+    font-size: 40px;
+    margin-left: 2%;
+    margin-right: 2%;
+    max-width: 95%;
+    }
+
+#finalDelJuego {
+    display: none;
+    margin-top: 25%;
+    justify-content: center;
+}
+
+#tiempo {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-left: 2%;
+    margin-right: 2%;
+    font-size: 60px;
+    background: white;
+    border-radius: 10px;
+    opacity: 80%;
+    color: black;
+    max-width: 95%;
+}
+
+#verPasaje {
+    display: flex;
+    justify-content: center;
+    margin-left: 2%;
+    margin-right: 2%;
+    max-width: 95%;
+}
+
+
+/*PASAJES ESTILOS*/
+
+/*10 pts*/
+#ganadorDiezPuntos {
+    display: none;
+}
+
+#ticketDiezPuntos {
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    background-color: white;
+   max-width: 80vh;
+   max-height: 95vh;
+}
+
+#botonDiezPuntos {
+    display: flex;
+    justify-content: center;
+    margin-left: 2%;
+    margin-right: 2%;
+    max-width: 95%;
+}
+
+/*6-9 pts*/
+#ganadorSeisANuevePuntos {
+    display: none;
+}
+
+#ticketSeisANuevePuntos {
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    background-color: white;
+   max-width: 80vh;
+   max-height: 95vh;
+}
+
+#botonSeisANuevePuntos {
+    display: flex;
+    justify-content: center;
+    margin-left: 2%;
+    margin-right: 2%;
+    max-width: 95%;
+}
+/*3-5pts*/
+#listaDeEspera {
+    display: none;
+}
+
+#ticketListaDeEspera {
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    background-color: white;
+   max-width: 80vh;
+   max-height: 95vh;
+}
+
+#botonListaDeEspera {
+    display: flex;
+    justify-content: center;
+    margin-left: 2%;
+    margin-right: 2%;
+    max-width: 95%;
+}
+/*0-2pts*/
+#noGanador {
+    display: none;
+}
+
+#ticketNoGanador {
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    background-color: white;
+    max-width: 80vh;
+    max-height: 94vh;
+}
+
+#botonNoGanaste {
+    display: flex;
+    justify-content: center;
+    margin-left: 2%;
+    margin-right: 2%;
+    max-width: 95%;
+}
+

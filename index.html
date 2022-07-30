@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BOOTSTRAP CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+  <!--FONT AWESOME CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!--LINKEO CSS-->
+<link rel="stylesheet" href="css/estilos.css">
+    <title>SCALONETA BUS</title>
+</head>
+<body>
+  <!--FORMULARIO INGRESO-->
+  <div id="divFormulario">
+    <form id="formularioIngreso" class="container">
+      <div class="col-8">
+        <input class= "ingreseSuNombre"type="text" placeholder="Ingrese su nombre.." required>
+        <input class= "ingreseSuApellido"type="text" placeholder="Ingrese su apellido.." required>
+        <button type="submit" class="btn btn-outline-success mb-6">INGRESAR</button>
+      </div>
+    </form>
+  </div>
+  
+  <!--CONTENIDO DESPUES DE LOGUEARSE-->
+
+<div id="contenidoDespuesDeIngreso" class="container-fluid col-8">
+  <form id="botonParaContinuar">
+    <button type="submit" class="btn btn-success">CONTINUAR</button>
+    </form>
+</div>
+
+  <!--CONTENIDO DESPUÉS DE SALUDO-->
+<div id="contenidoDespuesDeSaludo">
+  <form id="botonParaContinuar">
+    <button ID ="listaScaloneta" class="btn btn-success">VER ASIENTOS DISPONIBLES</button>
+    <button ID ="botonComenzarJuego"type="submit" class="btn btn-success">COMENZAR EL JUEGO</button>
+    </form>
+</div>
+
+  <!--LISTA DE ASIENTOS-->
+<div id="mostrarListaDeAsientos">
+  <button ID ="volverBoton" value="recargar" class="btn btn-success">VOLVER</button>
+</div>
+
+<!--JUEGO-->
+<div id="preguntasDelJuego">
+<p id="tiempoJuego"><span id="minutos"></span>:<span id="segundos"></span></p> 
+  
+<div id ="tableroDeJuego">
+  <div id="encabezado">
+    <span id="pregunta"></span>
+  </div>
+ 
+  <div class = "opcionesDelJuego" id="opcionUno" onclick="selecionarOpcion (0)">
+    AQUI VA LA OPCION 1
+  </div>
+
+  <div class = "opcionesDelJuego" id="opcionDos" onclick="selecionarOpcion (1)">
+    AQUI VA LA OPCION 2
+  </div>
+
+  <div class = "opcionesDelJuego" id="opcionTres" onclick="selecionarOpcion (2)">
+    AQUI VA LA OPCION 3
+  </div>
+  
+  <div class = "opcionesDelJuego" id="opcionCuatro" onclick="selecionarOpcion (3)">
+    AQUI VA LA OPCION 4
+  </div>
+</div>
+</div>
+
+<!--FINALIZAR JUEGO-->
+
+<div  id="despuesDelJuego">
+  <button ID ="pausar" class="btn btn-outline-danger">FINALIZAR JUEGO</button>
+</div>
+
+<!--VER PASAJE-->
+<div id="finalDelJuego">
+  <p id="tiempo"></p>
+  <button ID ="verPasaje" class="btn btn-outline-success">VER PASAJE</button>
+</div>
+
+<!--TICKETS-->
+<div id="ganadorDiezPuntos">
+  <img id="ticketDiezPuntos" class="container-fluid" src="imagenes/GANADOR 10PTS.jpg" alt="ticket ganador 10 aciertos">
+  <button ID ="botonDiezPuntos" value="recargar" class="btn btn-outline-success">VOLVER A JUGAR</button>
+</div>
+<div id="ganadorSeisANuevePuntos">
+  <img id="ticketSeisANuevePuntos" class="container-fluid"src="imagenes/GANADOR 6-9PTS.jpg" alt="ticket ganador 6 a 9 aciertos">
+  <button ID ="botonSeisANuevePuntos" value="recargar" class="btn btn-outline-success">VOLVER A JUGAR</button>
+</div>
+<div id="listaDeEspera">
+  <img id="ticketListaDeEspera" class="container-fluid" src="imagenes/LISTA DE ESPERA 3-5PTS.jpg" alt="ticket de lista de espera 3 a 5 aciertos">
+  <button ID ="botonListaDeEspera" value="recargar" class="btn btn-outline-success">VOLVER A JUGAR</button>
+</div>
+<div id="noGanador">
+  <img id="ticketNoGanador" class="container-fluid" src="imagenes/NO GANO.jpg" alt="ticket no ganador, menos de 3 aciertos">
+  <button ID ="botonNoGanaste" value="recargar" class="btn btn-outline-success">VOLVER A JUGAR</button>
+</div>
+
+<!--   ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------LINKEOS JAVASCRIPT-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+  <!--JAVASCRIPT FONT AWESOME-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!--JAVASCRIPT SWEET ALERT-->
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<!-- BOOTSTRAP JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+<!--ENLACE JAVASCRIPT-->
+<script src="script.js" ></script>
+</body>
+</html>
+
